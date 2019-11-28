@@ -1,0 +1,59 @@
+{
+  "name": "modern-web-animation",
+  "version": "1.0.0",
+  "description": "Simplified wrapper for the Web Animations API",
+  "scripts": {
+    "build": "del /q pkg && pika build",
+    "release": "pika publish",
+    "version": "yarn build"
+  },
+  "license": "MIT",
+  "author": "Ivan Khanevich <ivan.khanevich@gmail.com>",
+  "repository": {},
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-bundle-web"
+      ],
+      [
+        "pika-plugin-minify"
+      ],
+      [
+        "pika-plugin-package.json",
+        {
+          "*keywords": [
+            "+animation, Web Animation Api"
+          ],
+          "*files": [
+            "-bin/"
+          ],
+          "+author": "^",
+          "-devDependencies": {}
+        }
+      ]
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-web": "^0.3.4",
+    "@pika/plugin-bundle-web": "^0.3.4",
+    "@pika/plugin-standard-pkg": "^0.3.4",
+    "@pika/types": "^0.3.4",
+    "pika-plugin-minify": "^0.1.0",
+    "pika-plugin-package.json": "^1.0.1"
+  }
+}
