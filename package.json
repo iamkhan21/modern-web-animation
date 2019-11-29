@@ -1,6 +1,6 @@
 {
   "name": "modern-web-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simplified wrapper for the Web Animations API",
   "scripts": {
     "build": "del /q pkg && pika build",
