@@ -6,7 +6,7 @@
     "build": "del /q pkg && pika build",
     "release": "pika publish",
     "version": "yarn build",
-    "test": ""
+    "test": "mocha"
   },
   "license": "MIT",
   "author": "Ivan Khanevich <ivan.khanevich@gmail.com>",
@@ -54,6 +54,7 @@
     "@pika/plugin-bundle-web": "^0.3.4",
     "@pika/plugin-standard-pkg": "^0.3.4",
     "@pika/types": "^0.3.4",
+    "mocha": "^6.2.2",
     "pika-plugin-minify": "^0.1.0",
     "pika-plugin-package.json": "^1.0.1"
   }
