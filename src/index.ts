@@ -10,7 +10,6 @@ export function animate<K extends keyof HTMLElementTagNameMap>(
   }
 
   const keyframeEffect = new KeyframeEffect(element, keyframes, options);
-
   const animation = new Animation(keyframeEffect, document.timeline);
 
   return {
