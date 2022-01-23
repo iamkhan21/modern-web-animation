@@ -1,0 +1,47 @@
+{
+  "name": "modern-web-animation",
+  "version": "0.0.0",
+  "description": "Simplified wrapper for the Web Animations API",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "email": "mail@iamkhan.tech",
+    "name": "Ivan Khanevich"
+  },
+  "keywords": [
+    "animation",
+    "motion",
+    "spring",
+    "tween",
+    "timeline",
+    "dom"
+  ],
+  "repository": {
+    "url": "https://github.com/iamkhan21/modern-web-animation"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run build",
+    "update:deps": "pnpm up -r -i -L && pnpm i"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "19.0.0",
+    "nanospy": "0.4.0",
+    "prettier": "2.5.1",
+    "tsup": "5.11.11",
+    "typescript": "4.5.5",
+    "vite": "2.7.13",
+    "vitest": "0.2.0"
+  }
+}
