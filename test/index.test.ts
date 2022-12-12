@@ -1,5 +1,3 @@
-import { test, assert } from "vitest"
-import { animate } from "../src"
+import { test } from "vitest";
 
-test("animate", () => {
-})
+test("animate", () => {});
